@@ -1,9 +1,3 @@
-apt-get update && apt-get upgrade -y && \
-apt-get install wget proot git -y && \
-cd ~ && \
-rm ubuntu-in-termux && \
-git clone https://github.com/MFDGaming/ubuntu-in-termux.git && \
-cd ubuntu-in-termux && \
-chmod +x ubuntu.sh && \
-./ubuntu.sh -y && \
-rm -rf ubuntu.sh
+pkg install wget curl proot tar -y && \
+wget https://raw.githubusercontent.com/tuanpham-dev/termux-ubuntu/master/ubuntu.sh && \
+chmod +x ubuntu.sh && bash ubuntu.sh
